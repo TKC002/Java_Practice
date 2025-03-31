@@ -44,6 +44,35 @@ public class Vector {
         return new Vector(res);
     }
 
+    public double innerProduct(Vector other){
+        this.sameDim(other);
+        double res = 0;
+        for(int i=0; i<this.getDimension(); i++){
+            res +=this.get(i)*other.get(i);
+        }
+        return res;
+    }
+    
+    public Vector crossProduct(Vector other){
+        this.sameDim(other);
+        if (this.getDimension()==2){
+            return this.crossProduct2D(other);
+        }else if(this.getDimension()==3){
+            return this.crossProduct3D(other);
+        }else{
+            throw new IllegalArgumentException(String.format("invalid dimension %d. dimension must be 2 or 3.", this.getDimension()));
+        }
+    }
+    private Vector crossProduct2D(Vector other) {
+        return new Vector(0, 0, this.get(0)*other.get(1)-this.get(1)*other.get(0));
+    }
+    private Vector crossProduct3D(Vector other){
+        double e0 = this.get(1)*other.get(2)-this.get(2)*other.get(1);
+        double e1 = this.get(2)*other.get(0)-this.get(0)*other.get(2);
+        double e2 = this.get(0)*other.get(1)-this.get(1)*other.get(0);
+        return new Vector(e0, e1, e2);
+    }
+
     public double distance(Vector other){
         this.sameDim(other);
         double sum = 0;
