@@ -14,5 +14,11 @@ public class Main {
         Vector d = v2.div(3);
         System.out.println("sum: (" + m.get(0) + ", " + m.get(1) + "), should be (9.0, 12.0)");
         System.out.println("diff: (" + d.get(0) + ", " + d.get(1) + "), should be (1.0, 1.333)");
+
+        double i = v1.innerProduct(v2);
+        Vector c = v1.crossProduct(v2);
+        System.out.println("sum: (" + i + "), should be 11");
+        System.out.println("diff: (" + c.get(0) + ", " + c.get(1) + "," + c.get(2) + "), should be (0, 0, -2)");
+
     }
 }
