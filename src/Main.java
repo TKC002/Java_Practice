@@ -7,7 +7,7 @@ public class Main {
         Vector sum = v1.add(v2);      // 結果は (4.0, 6.0)
         Vector diff = v1.subtract(v2); // 結果は (-2.0, -2.0)
         
-        System.out.println("sum: (" + sum.get(0) + ", " + sum.get(1) + ")");
-        System.out.println("diff: (" + diff.get(0) + ", " + diff.get(1) + ")");
+        System.out.println("sum: (" + sum.get(0) + ", " + sum.get(1) + "), should be (4.0, 6.0)");
+        System.out.println("diff: (" + diff.get(0) + ", " + diff.get(1) + "), should be (-2.0, -2.0)");
     }
 }
