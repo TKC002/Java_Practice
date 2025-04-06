@@ -97,15 +97,18 @@ public class Vector {
         return Math.sqrt(sum);
     }
     
-    // res = [k, parallel?]
-    // parallel? == 0 or 1
+    /**
+     * 
+     * @param other
+     * @return array whose elements are result and k where this*k = other
+     */
     public double[] parallel(Vector other){
         this.sameDim(other);
         double k = other.get(0)/this.get(0);
-        double[] res = new double[]{k, 1};
+        double[] res = new double[]{1, k};
         for(int i=1; i<this.getDimension(); i++){
             if(this.get(i)*k != other.get(i)){
-                res[1] = 0;
+                res[0] = 0;
                 break;
             }
         }

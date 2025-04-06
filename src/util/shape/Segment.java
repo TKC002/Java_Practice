@@ -26,11 +26,16 @@ public class Segment extends Shape{
     }
 
     @Override
-    public void contain(Vector p) {
+    public boolean contain(Vector p) {
         Vector direction = this.q.sub(this.p);
         Vector tmp = p.sub(this.p);
 
-
+        double[] para = direction.parallel(tmp);
+        if(para[0]==1 && para[1]>=0 && para[1]<=1){
+            return true;
+        }else{
+            return false;
+        }
     }
     
 }

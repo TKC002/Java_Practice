@@ -5,5 +5,5 @@ abstract class Shape{
     public abstract double volume();
     // public abstract void draw();
     public abstract void move(Vector p);
-    public abstract void contain(Vector p); 
+    public abstract boolean contain(Vector p); 
 }
