@@ -35,7 +35,7 @@ public class Vector {
         }
         return new Vector(res);
     }
-    public Vector subtract(Vector other){
+    public Vector sub(Vector other){
         this.sameDim(other);
         double[] res = new double[this.getDimension()];
         for(int i=0; i<this.getDimension(); i++){
