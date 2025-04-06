@@ -44,7 +44,7 @@ public class Vector {
         return new Vector(res);
     }
 
-    public Vector mult(double a){
+    public Vector mul(double a){
         double[] res = new double[this.getDimension()];
         for(int i=0; i<this.getDimension(); i++){
             res[i] = this.get(i)*a;

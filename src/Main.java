@@ -10,7 +10,7 @@ public class Main {
         System.out.println("sum: (" + sum.get(0) + ", " + sum.get(1) + "), should be (4.0, 6.0)");
         System.out.println("diff: (" + diff.get(0) + ", " + diff.get(1) + "), should be (-2.0, -2.0)");
 
-        Vector m = v2.mult(3);
+        Vector m = v2.mul(3);
         Vector d = v2.div(3);
         System.out.println("sum: (" + m.get(0) + ", " + m.get(1) + "), should be (9.0, 12.0)");
         System.out.println("diff: (" + d.get(0) + ", " + d.get(1) + "), should be (1.0, 1.333)");
