@@ -1,4 +1,6 @@
 import util.shape.Vector;
+import java.util.Arrays;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -15,10 +17,19 @@ public class Main {
         System.out.println("sum: (" + m.get(0) + ", " + m.get(1) + "), should be (9.0, 12.0)");
         System.out.println("diff: (" + d.get(0) + ", " + d.get(1) + "), should be (1.0, 1.333)");
 
+        // product
         double i = v1.innerProduct(v2);
         Vector c = v1.crossProduct(v2);
         System.out.println("sum: (" + i + "), should be 11");
         System.out.println("diff: (" + c.get(0) + ", " + c.get(1) + "," + c.get(2) + "), should be (0, 0, -2)");
+
+        //parallel
+        double[] para = v1.parallel(v2);
+        System.out.println(Arrays.toString(para));
+
+        Vector v3 = new Vector(0.5, 1);
+        double[] para2 = v1.parallel(v3);
+        System.out.println(Arrays.toString(para2));
 
     }
 }
