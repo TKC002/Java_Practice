@@ -44,6 +44,21 @@ public class Vector {
         return new Vector(res);
     }
 
+    public Vector mult(double a){
+        double[] res = new double[this.getDimension()];
+        for(int i=0; i<this.getDimension(); i++){
+            res[i] = this.get(i)*a;
+        }
+        return new Vector(res);
+    }
+    public Vector div(double a){
+        double[] res = new double[this.getDimension()];
+        for(int i=0; i<this.getDimension(); i++){
+            res[i] = this.get(i)/a;
+        }
+        return new Vector(res);
+    }
+
     public double innerProduct(Vector other){
         this.sameDim(other);
         double res = 0;
