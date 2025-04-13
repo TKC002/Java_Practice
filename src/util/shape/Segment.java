@@ -37,5 +37,13 @@ public class Segment extends Shape{
             return false;
         }
     }
+
+    public boolean cross(Segment other){
+        // it is for only 2D 
+        Vector ab = this.q.sub(this.p);
+        Vector ac = other.p.sub(this.p);
+        Vector ad = other.q.sub(this.p);
+        return ab.crossProduct(ac).get(2)*ab.crossProduct(ad).get(2) < 0;
+    }
     
 }
